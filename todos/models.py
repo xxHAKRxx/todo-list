@@ -5,4 +5,4 @@ class Todo(models.Model):
     complete_by = models.DateTimeField()
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.complete_by}"
