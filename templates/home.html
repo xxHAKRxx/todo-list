@@ -1,13 +1,19 @@
+<!--
+Name: Evan Westcomb
+Class: CIS 218
+Date: 2/13/2026
+-->
+
 {% extends "base.html" %}
 
 {% block title %}Personal Todo List{% endblock title %}
 
 {% block content %}
-<h2>Todo List</h2>
-<h2>Name of Thing Todo:</h2>
+<h1 style="margin-top: 60px;">Todo List</h1>
+<h3>Current Todos:</h3>
     <ul>
-        {% for todo in todos %}
-            <li>{{ todo.name }} {{ todo.complete_by }}</li>
+        {% for todo in todo_list %}
+            <li>{{ todo.name }} - {{ todo.complete_by }}</li>
         {% endfor %}
     </ul>
 {% endblock content %}
