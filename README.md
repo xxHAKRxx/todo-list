@@ -2,7 +2,7 @@
 
 ## Author
 
-
+Evan Westcomb
 
 ## Description
 
@@ -135,8 +135,8 @@ If you have more questions regarding this, don't hesitate to ask.
 
 ## Outside Resources Used
 
-
+Bootstrap for CSS styling: https://getbootstrap.com/docs/5.2/examples/sticky-footer-navbar/
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-
+Header was hidden behind the navbar for some reason, had to add a style modifier to increase the margin and make it appear
