@@ -10,10 +10,25 @@ Date: 2/13/2026
 
 {% block content %}
 <h1 style="margin-top: 60px;">Todo List</h1>
+
+<!-- Redirects the user to the admin page for adding a todo (since we don't know how to implement CRUD yet)-->
+<a href="{% url 'admin:todos_todo_add' %}">
+    <button>Add a Todo</button>
+</a>
 <h3>Current Todos:</h3>
     <ul>
         {% for todo in todo_list %}
-            <li>{{ todo.name }} - {{ todo.complete_by }}</li>
+            <li>
+                {{ todo.name }} - Due: {{ todo.complete_by }}
+                
+                <!-- Redirects the user to the edit and delete pages in the admin page -->
+                <a href="{% url 'admin:todos_todo_change' todo.pk %}">
+                    <button>Edit</button>
+                </a>
+                <a href="{% url 'admin:todos_todo_delete' todo.pk %}">
+                    <button>Delete</button>
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock content %}
