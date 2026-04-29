@@ -16,11 +16,13 @@ A simple todo list app where you can make tasks for yourself to complete. This i
    * ```. .venv/Scripts/activate```
 4. Install all of the packages found in a text file called requirements.txt.
    * ```python -m pip install -r requirements.txt```
-5. Create a superuser so you can log yourself in.
+5. Apply migrations to the project (It will work without them, but there will be problems).
+   * ```(winpty) python manage.py migrate```
+6. Create a superuser so you can log yourself in.
    * ```(winpty) python manage.py createsuperuser```
-6. Run the localhost server and log yourself in.
+7. Run the localhost server and log yourself in.
    * ```(winpty) python manage.py runserver```
-7. You're officially in the site!
+8. You're officially in the site!
 
 ## Outside Resources Used
 
